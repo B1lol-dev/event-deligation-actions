@@ -80,6 +80,23 @@ export const ParagraphStyleEditor = (): string => {
                   <button onclick="window.setStyle('color', 'green')" class="w-full h-8 bg-green-500 hover:opacity-80 rounded"></button>
               </div>
           </div>
+
+          <!-- Text Decoration -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+              <h2 class="font-semibold mb-3 text-gray-700">Text Decoration</h2>
+              <div class="flex space-x-2">
+                  <button onclick="setStyle('textDecoration', 'none')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      None
+                  </button>
+                  <button onclick="setStyle('textDecoration', 'underline')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Underline
+                  </button>
+                  <button onclick="setStyle('textDecoration', 'line-through')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Strike
+                  </button>
+              </div>
+          </div>
+          
         </div>
       </div>
     </div>
