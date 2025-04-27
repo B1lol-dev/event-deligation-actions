@@ -44,7 +44,18 @@ export const ParagraphStyleEditor = (): string => {
             </div>
           </div>
 
-
+          <!-- Font Weight -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+              <h2 class="font-semibold mb-3 text-gray-700">Font Weight</h2>
+              <div class="flex space-x-2">
+                  <button onclick="window.setStyle('fontWeight', 'normal')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Normal
+                  </button>
+                  <button onclick="window.setStyle('fontWeight', 'bold')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Bold
+                  </button>
+              </div>
+          </div>
 
         </div>
       </div>
