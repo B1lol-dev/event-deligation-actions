@@ -85,18 +85,33 @@ export const ParagraphStyleEditor = (): string => {
           <div class="bg-gray-50 p-4 rounded-lg">
               <h2 class="font-semibold mb-3 text-gray-700">Text Decoration</h2>
               <div class="flex space-x-2">
-                  <button onclick="setStyle('textDecoration', 'none')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                  <button onclick="window.setStyle('textDecoration', 'none')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
                       None
                   </button>
-                  <button onclick="setStyle('textDecoration', 'underline')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                  <button onclick="window.setStyle('textDecoration', 'underline')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
                       Underline
                   </button>
-                  <button onclick="setStyle('textDecoration', 'line-through')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                  <button onclick="window.setStyle('textDecoration', 'line-through')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
                       Strike
                   </button>
               </div>
           </div>
-          
+
+          <!-- Font Size -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+              <h2 class="font-semibold mb-3 text-gray-700">Font Size</h2>
+              <div class="flex space-x-2">
+                  <button onclick="window.setStyle('fontSize', '12px')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Small
+                  </button>
+                  <button onclick="window.setStyle('fontSize', '16px')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Medium
+                  </button>
+                  <button onclick="window.setStyle('fontSize', '24px')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Large
+                  </button>
+              </div>
+          </div>
         </div>
       </div>
     </div>
