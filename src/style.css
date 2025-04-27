@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* animate bg */
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#user_card::before,
+#user_card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: calc(100% + 1rem);
+  height: calc(100% + 1rem);
+  border-radius: inherit;
+  animation: border-anim 2s linear infinite;
+  background: conic-gradient(
+    from var(--border-angle),
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #7fff00,
+    #00ff00,
+    #00ff7f,
+    #00ffff,
+    #007fff,
+    #0000ff,
+    #7f00ff,
+    #ff00ff,
+    #ff007f,
+    #ff0000
+  );
+}
+
+#user_card::after {
+  filter: blur(1.5rem);
+}
+
+@keyframes border-anim {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+/* From Uiverse.io by mobinkakei */
+#user_card button {
+  position: relative;
+  margin: 1.5rem 0 0 0;
+  padding: 10px 35px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  color: #1d89ff;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+#user_card button span {
+  color: #164ca7;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+#user_card button:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+#user_card button:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+#user_card button {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+#user_card button span {
+  z-index: 20;
+}
+
+#user_card button:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+#user_card button:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* user list */
+#user_list_form {
+  button {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    transition: 0.3s ease;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0;
+  }
+
+  button span {
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: #ffffff10;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    transition-property: color;
+    height: 100%;
+    width: 100%;
+  }
+
+  button span:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+  }
+}
+
+/* login */
+@keyframes login-bg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
