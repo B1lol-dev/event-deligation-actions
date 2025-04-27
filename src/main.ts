@@ -5,6 +5,7 @@ import { Counter } from "./components/Counter";
 import { UserInfo } from "./components/UserInfo";
 import { UserList } from "./components/UserList";
 import { Login } from "./components/Login";
+import { ParagraphStyleEditor } from "./components/ParagraphStyleEditor";
 
 const root = document.getElementById("app")!;
 
@@ -35,5 +36,6 @@ root.innerHTML = /*html*/ `
     ${UserInfo(user)}
     ${UserList(users)}
     ${Login("john32", "123456")}
+    ${ParagraphStyleEditor()}
   </div>
 `;
