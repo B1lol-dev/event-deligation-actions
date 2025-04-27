@@ -2,6 +2,7 @@ declare global {
   interface Window {
     setStyle: (property: string, value: string) => void;
     setCustomProperty: () => void;
+    resetStyles: () => void;
   }
 }
 
@@ -29,6 +30,13 @@ export const ParagraphStyleEditor = (): string => {
         custom_property_name.value = "";
         custom_property_value.value = "";
       }
+    };
+
+    window.resetStyles = () => {
+      const paragraph = document.getElementById(
+        "editable_paragraph"
+      ) as HTMLParagraphElement;
+      paragraph.style = "";
     };
   }, 0);
 
@@ -153,6 +161,13 @@ export const ParagraphStyleEditor = (): string => {
                     </button>
                 </div>
             </div>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="mt-6 text-center">
+          <button onclick="window.resetStyles()" class="px-6 py-2 bg-red-500 text-white rounded">
+            Reset All Styles
+          </button>
         </div>
       </div>
     </div>
