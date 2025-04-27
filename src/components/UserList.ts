@@ -74,8 +74,8 @@ export const UserList = (users: IUserList): string => {
           </tbody>
         </table>
         <form id="user_list_form" class="flex items-center justify-center gap-2 bg-white p-3 rounded-lg mt-5 max-w-[650px] w-full">
-          <input type="text" placeholder="first name" class="px-3 text-lg max-w-[200px]">
-          <input type="text" placeholder="last name" class="px-3 text-lg max-w-[200px]">
+          <input type="text" placeholder="first name" class="px-3 text-lg max-w-[200px] border border-gray-400 rounded py-1">
+          <input type="text" placeholder="last name" class="px-3 text-lg max-w-[200px] border border-gray-400 rounded py-1">
 
           <button type="submit">
             <span>Create</span>
