@@ -69,6 +69,17 @@ export const ParagraphStyleEditor = (): string => {
                   </button>
               </div>
           </div>
+
+          <!-- Text Color -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+              <h2 class="font-semibold mb-3 text-gray-700">Text Color</h2>
+              <div class="grid grid-cols-4 gap-2">
+                  <button onclick="window.setStyle('color', 'black')" class="w-full h-8 bg-black hover:opacity-80 rounded"></button>
+                  <button onclick="window.setStyle('color', 'red')" class="w-full h-8 bg-red-500 hover:opacity-80 rounded"></button>
+                  <button onclick="window.setStyle('color', 'blue')" class="w-full h-8 bg-blue-500 hover:opacity-80 rounded"></button>
+                  <button onclick="window.setStyle('color', 'green')" class="w-full h-8 bg-green-500 hover:opacity-80 rounded"></button>
+              </div>
+          </div>
         </div>
       </div>
     </div>
