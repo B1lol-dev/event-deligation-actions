@@ -18,7 +18,7 @@ export const UserList = (users: IUserList): string => {
       const firstName = user_list_form.children[0] as HTMLInputElement;
       const lastName = user_list_form.children[1] as HTMLInputElement;
 
-      if (firstName.value || lastName.value) {
+      if (!firstName.value || !lastName.value) {
         return;
       }
 
