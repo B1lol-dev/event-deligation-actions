@@ -33,9 +33,7 @@ export const ParagraphStyleEditor = (): string => {
     };
 
     window.resetStyles = () => {
-      const paragraph = document.getElementById(
-        "editable_paragraph"
-      ) as HTMLParagraphElement;
+      const paragraph: any = document.getElementById("editable_paragraph");
       paragraph.style = "";
     };
   }, 0);
