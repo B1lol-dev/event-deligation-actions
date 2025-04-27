@@ -1,10 +1,9 @@
 export const Counter = (count: number): string => {
   const updateCount = () => {
-    const button = document.getElementById(
-      "counter_button"
-    ) as HTMLButtonElement;
+    const button = document.getElementById("counter_button")
+      ?.children[1] as HTMLButtonElement;
     if (button) {
-      button.textContent = `Count is: ${count}`;
+      button.textContent = count.toString();
     }
   };
 
@@ -27,7 +26,10 @@ export const Counter = (count: number): string => {
 
   return /*html*/ `
     <div class="min-h-screen flex flex-col items-center justify-center bg-blue-950 snap-center">
-      <button type="button" class="bg-purple-500 text-white px-5 py-3 rounded-md transition-all duration-100 text-xl font-semibold hover:opacity-90 active:scale-95" id="counter_button">Count is: ${count}</button>
+      <button type="button" id="counter_button">
+        <span class="counter_button_back"></span>
+        <span class="counter_button_front">${count}</span>
+      </button>
     </div>
     `;
 };
