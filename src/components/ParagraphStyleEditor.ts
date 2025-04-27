@@ -1,6 +1,7 @@
 declare global {
   interface Window {
     setStyle: (property: string, value: string) => void;
+    setCustomProperty: () => void;
   }
 }
 
@@ -8,6 +9,26 @@ export const ParagraphStyleEditor = (): string => {
   setTimeout(() => {
     window.setStyle = (property: any, value: string): void => {
       document.getElementById("editable_paragraph")!.style[property] = value;
+    };
+
+    window.setCustomProperty = () => {
+      const custom_property_name = document.getElementById(
+        "custom_property_name"
+      ) as HTMLInputElement;
+      const custom_property_value = document.getElementById(
+        "custom_property_value"
+      ) as HTMLInputElement;
+
+      if (custom_property_name && custom_property_value) {
+        window.setStyle(
+          custom_property_name.value,
+          custom_property_value.value
+        );
+
+        // Clear the inputs
+        custom_property_name.value = "";
+        custom_property_value.value = "";
+      }
     };
   }, 0);
 
@@ -112,6 +133,26 @@ export const ParagraphStyleEditor = (): string => {
                   </button>
               </div>
           </div>
+        </div>
+
+        <!-- Custom Properties -->
+        <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+            <h2 class="font-semibold mb-3 text-gray-700">Custom CSS Properties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Property Name</label>
+                    <input type="text" id="custom_property_name" placeholder="for example color" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Property Value</label>
+                    <input type="text" id="custom_property_value" placeholder="for example red" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex items-end">
+                    <button onclick="window.setCustomProperty()" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Apply
+                    </button>
+                </div>
+            </div>
         </div>
       </div>
     </div>
