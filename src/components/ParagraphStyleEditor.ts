@@ -165,7 +165,7 @@ export const ParagraphStyleEditor = (): string => {
 
         <!-- Reset Button -->
         <div class="mt-6 text-center">
-          <button onclick="window.resetStyles()" class="px-6 py-2 bg-red-500 text-white rounded">
+          <button onclick="window.resetStyles()" class="px-6 py-2 bg-red-500 text-white rounded outline-none hover:bg-red-600">
             Reset All Styles
           </button>
         </div>
