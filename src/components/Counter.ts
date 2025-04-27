@@ -26,7 +26,7 @@ export const Counter = (count: number): string => {
 
   return /*html*/ `
     <div class="min-h-screen flex flex-col items-center justify-center bg-blue-950 snap-center relative">
-      <button type="button" id="counter_button" class="z-1 shadow-md scale-150">
+      <button type="button" id="counter_button" class="z-1 shadow-md scale-150 skew-x-5">
         <span class="counter_button_back"></span>
         <span class="counter_button_front"><p class="text-white">${count}</p></span>
       </button>
