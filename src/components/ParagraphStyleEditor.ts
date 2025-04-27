@@ -57,6 +57,18 @@ export const ParagraphStyleEditor = (): string => {
               </div>
           </div>
 
+          <!-- Font Style -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+              <h2 class="font-semibold mb-3 text-gray-700">Font Style</h2>
+              <div class="flex space-x-2">
+                  <button onclick="window.setStyle('fontStyle', 'normal')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Normal
+                  </button>
+                  <button onclick="window.setStyle('fontStyle', 'italic')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded">
+                      Italic
+                  </button>
+              </div>
+          </div>
         </div>
       </div>
     </div>
